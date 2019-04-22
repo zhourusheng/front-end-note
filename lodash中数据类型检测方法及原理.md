@@ -6,4 +6,5 @@
 > * _.isArray(value)
 > * _.isBoolean(value)
 
-
+***
+Lodash 中文文档 https://www.html.cn/doc/lodash/
