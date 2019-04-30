@@ -1,5 +1,6 @@
+## 准备工作
 1. Flow 静态类型检查工具
-  
+  >* 什么是flow
 
 
 
@@ -28,6 +29,19 @@
   > * Vue.js 利用 createElement 方法创建 VNode，它定义在 `src/core/vdom/create-elemenet.js` 中：
 6. update
 
+## 组件化
+  1. createComponent
+  2. 
+
+## 深入响应式原理
+
+## 编译
+
+## 拓展
+
+## Vue-Router
+
+## Vuex
 
 
 
