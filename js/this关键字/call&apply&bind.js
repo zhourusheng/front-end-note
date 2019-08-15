@@ -17,6 +17,7 @@ console.log(': MinApply', MinApply)
  *       第二个参数就是一个需要传入调用方法的参数，这个参数必须为数组或者类数组（arguments对象）。
  *       2. apply() 中的第二个参数可以写成null 或者 undefined 或者 window document 都可以。
  *          如果这个函数处于非严格模式下，则指定为 null 或 undefined 时会自动替换为指向全局对象，原始值会被包装。
+ *          在严格模式下，this 的值将会是 undefined。
  *  */ 
 
 // call() 求数组最大值，最小值
@@ -30,4 +31,14 @@ console.log(': MinCall', MinCall)
 
 
 // apply() 和 call() 的区别
+function add(c, d) {
+  return this.a + this.b + c + d
+}
 
+var obj = { a: 1, b:3 }
+
+var callSum = add.call(obj, 5, 7) // 1+3+5+7=16
+var applySum = add.apply(obj, [10, 20]) // 1+3+10+20=33
+
+console.log(': callSum', callSum)
+console.log(': applySum', applySum)
