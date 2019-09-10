@@ -1,0 +1,322 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		150C8C79229CCFE1004E9B1C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 150C8C78229CCFE1004E9B1C /* AppDelegate.m */; };
+		150C8C7C229CCFE1004E9B1C /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 150C8C7B229CCFE1004E9B1C /* ViewController.m */; };
+		150C8C7F229CCFE1004E9B1C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 150C8C7D229CCFE1004E9B1C /* Main.storyboard */; };
+		150C8C81229CCFE3004E9B1C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 150C8C80229CCFE3004E9B1C /* Assets.xcassets */; };
+		150C8C87229CCFE3004E9B1C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 150C8C86229CCFE3004E9B1C /* main.m */; };
+		153C8AF9229E51A30042CDCE /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 153C8AF8229E51A30042CDCE /* SystemConfiguration.framework */; };
+		153C8AFB229E51E90042CDCE /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 153C8AFA229E51E90042CDCE /* Security.framework */; };
+		153C8AFD229E51F00042CDCE /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 153C8AFC229E51F00042CDCE /* CoreTelephony.framework */; };
+		153C8AFF229E51F80042CDCE /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 153C8AFE229E51F80042CDCE /* CFNetwork.framework */; };
+		153C8B01229E51FF0042CDCE /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 153C8B00229E51FF0042CDCE /* CoreGraphics.framework */; };
+		153C8B03229E52680042CDCE /* libz.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 153C8B02229E52680042CDCE /* libz.1.dylib */; };
+		153C8B05229E529A0042CDCE /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 153C8B04229E529A0042CDCE /* libsqlite3.dylib */; };
+		153C8B07229E52B80042CDCE /* libc++.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 153C8B06229E52B80042CDCE /* libc++.1.dylib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		150C8C74229CCFE1004E9B1C /* ImoocHybridIOSNative.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ImoocHybridIOSNative.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		150C8C77229CCFE1004E9B1C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		150C8C78229CCFE1004E9B1C /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		150C8C7A229CCFE1004E9B1C /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		150C8C7B229CCFE1004E9B1C /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		150C8C7E229CCFE1004E9B1C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		150C8C80229CCFE3004E9B1C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		150C8C85229CCFE3004E9B1C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		150C8C86229CCFE3004E9B1C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		150C8CAA229CD089004E9B1C /* Constants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
+		153C8AF8229E51A30042CDCE /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		153C8AFA229E51E90042CDCE /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		153C8AFC229E51F00042CDCE /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
+		153C8AFE229E51F80042CDCE /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		153C8B00229E51FF0042CDCE /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		153C8B02229E52680042CDCE /* libz.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.1.dylib; path = ../../../../../../../../usr/lib/libz.1.dylib; sourceTree = "<group>"; };
+		153C8B04229E529A0042CDCE /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = ../../../../../../../../usr/lib/libsqlite3.dylib; sourceTree = "<group>"; };
+		153C8B06229E52B80042CDCE /* libc++.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libc++.1.dylib"; path = "../../../../../../../../usr/lib/libc++.1.dylib"; sourceTree = "<group>"; };
+		20842B358AE5EBDEFB863FFA /* libPods-ImoocHybridIOSNativeUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ImoocHybridIOSNativeUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5AA31254435F9C8A7988414C /* libPods-ImoocHybridIOSNativeTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ImoocHybridIOSNativeTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E58EE5142FCAE2AB6AFB3A75 /* libPods-ImoocHybridIOSNative.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ImoocHybridIOSNative.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		150C8C71229CCFE1004E9B1C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				153C8B07229E52B80042CDCE /* libc++.1.dylib in Frameworks */,
+				153C8B05229E529A0042CDCE /* libsqlite3.dylib in Frameworks */,
+				153C8B03229E52680042CDCE /* libz.1.dylib in Frameworks */,
+				153C8B01229E51FF0042CDCE /* CoreGraphics.framework in Frameworks */,
+				153C8AFF229E51F80042CDCE /* CFNetwork.framework in Frameworks */,
+				153C8AFD229E51F00042CDCE /* CoreTelephony.framework in Frameworks */,
+				153C8AFB229E51E90042CDCE /* Security.framework in Frameworks */,
+				153C8AF9229E51A30042CDCE /* SystemConfiguration.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		150C8C6B229CCFE0004E9B1C = {
+			isa = PBXGroup;
+			children = (
+				150C8C76229CCFE1004E9B1C /* ImoocHybridIOSNative */,
+				150C8C75229CCFE1004E9B1C /* Products */,
+				2769C1D52D81F1288D212326 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		150C8C75229CCFE1004E9B1C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				150C8C74229CCFE1004E9B1C /* ImoocHybridIOSNative.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		150C8C76229CCFE1004E9B1C /* ImoocHybridIOSNative */ = {
+			isa = PBXGroup;
+			children = (
+				150C8CA9229CD06E004E9B1C /* 常量 */,
+				150C8C77229CCFE1004E9B1C /* AppDelegate.h */,
+				150C8C78229CCFE1004E9B1C /* AppDelegate.m */,
+				150C8C7A229CCFE1004E9B1C /* ViewController.h */,
+				150C8C7B229CCFE1004E9B1C /* ViewController.m */,
+				150C8C7D229CCFE1004E9B1C /* Main.storyboard */,
+				150C8C80229CCFE3004E9B1C /* Assets.xcassets */,
+				150C8C85229CCFE3004E9B1C /* Info.plist */,
+				150C8C86229CCFE3004E9B1C /* main.m */,
+			);
+			path = ImoocHybridIOSNative;
+			sourceTree = "<group>";
+		};
+		150C8CA9229CD06E004E9B1C /* 常量 */ = {
+			isa = PBXGroup;
+			children = (
+				150C8CAA229CD089004E9B1C /* Constants.h */,
+			);
+			path = "常量";
+			sourceTree = "<group>";
+		};
+		2769C1D52D81F1288D212326 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				153C8B06229E52B80042CDCE /* libc++.1.dylib */,
+				153C8B04229E529A0042CDCE /* libsqlite3.dylib */,
+				153C8B02229E52680042CDCE /* libz.1.dylib */,
+				153C8B00229E51FF0042CDCE /* CoreGraphics.framework */,
+				153C8AFE229E51F80042CDCE /* CFNetwork.framework */,
+				153C8AFC229E51F00042CDCE /* CoreTelephony.framework */,
+				153C8AFA229E51E90042CDCE /* Security.framework */,
+				153C8AF8229E51A30042CDCE /* SystemConfiguration.framework */,
+				E58EE5142FCAE2AB6AFB3A75 /* libPods-ImoocHybridIOSNative.a */,
+				5AA31254435F9C8A7988414C /* libPods-ImoocHybridIOSNativeTests.a */,
+				20842B358AE5EBDEFB863FFA /* libPods-ImoocHybridIOSNativeUITests.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		150C8C73229CCFE1004E9B1C /* ImoocHybridIOSNative */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 150C8CA0229CCFE3004E9B1C /* Build configuration list for PBXNativeTarget "ImoocHybridIOSNative" */;
+			buildPhases = (
+				150C8C70229CCFE1004E9B1C /* Sources */,
+				150C8C71229CCFE1004E9B1C /* Frameworks */,
+				150C8C72229CCFE1004E9B1C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ImoocHybridIOSNative;
+			productName = ImoocHybridIOSNative;
+			productReference = 150C8C74229CCFE1004E9B1C /* ImoocHybridIOSNative.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		150C8C6C229CCFE0004E9B1C /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 1010;
+				ORGANIZATIONNAME = LGD_Sunday;
+				TargetAttributes = {
+					150C8C73229CCFE1004E9B1C = {
+						CreatedOnToolsVersion = 10.1;
+					};
+				};
+			};
+			buildConfigurationList = 150C8C6F229CCFE0004E9B1C /* Build configuration list for PBXProject "ImoocHybridIOSNative" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 150C8C6B229CCFE0004E9B1C;
+			productRefGroup = 150C8C75229CCFE1004E9B1C /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				150C8C73229CCFE1004E9B1C /* ImoocHybridIOSNative */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		150C8C72229CCFE1004E9B1C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				150C8C81229CCFE3004E9B1C /* Assets.xcassets in Resources */,
+				150C8C7F229CCFE1004E9B1C /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		150C8C70229CCFE1004E9B1C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				150C8C7C229CCFE1004E9B1C /* ViewController.m in Sources */,
+				150C8C87229CCFE3004E9B1C /* main.m in Sources */,
+				150C8C79229CCFE1004E9B1C /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		150C8C7D229CCFE1004E9B1C /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				150C8C7E229CCFE1004E9B1C /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		150C8C9F229CCFE3004E9B1C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		150C8CA2229CCFE3004E9B1C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = X23L3QCJ5Z;
+				INFOPLIST_FILE = ImoocHybridIOSNative/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/ImoocHybridIOSNative/WeChatSDK",
+				);
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-ObjC",
+					"-Objc",
+					"-all_load",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.sunday.imoocHybridIOSNative;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		150C8C6F229CCFE0004E9B1C /* Build configuration list for PBXProject "ImoocHybridIOSNative" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				150C8C9F229CCFE3004E9B1C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		150C8CA0229CCFE3004E9B1C /* Build configuration list for PBXNativeTarget "ImoocHybridIOSNative" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				150C8CA2229CCFE3004E9B1C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 150C8C6C229CCFE0004E9B1C /* Project object */;
+}

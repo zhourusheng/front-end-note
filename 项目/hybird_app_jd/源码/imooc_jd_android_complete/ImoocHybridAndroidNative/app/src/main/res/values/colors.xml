@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="mainColor">#d43433</color>
+    <color name="mainColorH">#C80F1F</color>
+    <color name="stateBarColor">#00000000</color>
+    <color name="textColor">#333333</color>
+</resources>
