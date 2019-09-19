@@ -12,36 +12,36 @@
   #### 2.1 HashRouter
     使用HashRouter，url中会有个#，例如localhost:3000/#，它是通过hash值来对路由进行控制。
     
-    ``` 
-      import { HashRouter, Route } from 'react-router-dom'
-    
-      render () {
-        return {
-          <HashRouter>
-            <Route path="/" component={Home}>
-          </HashRouter>
-        }
+  ``` js
+    import { HashRouter, Route } from 'react-router-dom'
+  
+    render () {
+      return {
+        <HashRouter>
+          <Route path="/" component={Home}>
+        </HashRouter>
       }
-    ```
+    }
+  ```
 
   #### 2.2 BrowserRouter
     BrowserRouter, 它的原理是使用HTML5 history API (pushState, replaceState, popState)来使你的内容随着url动态改变的。
     
-    ```
-      import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
-    
-      render() {
-        return (
-          <Router basename="/react_test">
-            <Switch>
-              <Route path="/login" component={Login} />
-              <Route path="/singlePage" component={SinglePage} />
-              <Route path="/" component={MyLayOut} />
-            </Switch>
-          </Router>
-        )
-      }
-    ```
+  ``` js
+    import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
+  
+    render() {
+      return (
+        <Router basename="/react_test">
+          <Switch>
+            <Route path="/login" component={Login} />
+            <Route path="/singlePage" component={SinglePage} />
+            <Route path="/" component={MyLayOut} />
+          </Switch>
+        </Router>
+      )
+    }
+  ```
   ##### 2.2.1 HTML5 History API
     https://developer.mozilla.org/zh-CN/docs/Web/API/History
 
@@ -49,9 +49,9 @@
   #### 2.3 Route
     Router 路由的一个原材料，它是控制路径对应显示的组件。我们经常用的是exact、path以及component属性。
     
-    ```
-      <Route path="/login" component={Login} />
-    ```
+  ``` js
+    <Route path="/login" component={Login} />
+  ```
       1). exact: 控制匹配到/路径时不会再继续向下匹配。
       2). path: 标识路由的路径。
       3). component: 表示路径对应显示的组件。
@@ -83,11 +83,11 @@
     1). replace(): 有些场景下，重复使用push或a标签跳转会产生死循环，为了避免这种情况出现，
         react-router-dom提供了replace。在可能会出现死循环的地方使用replace来跳转：
     
-        ` this.props.history.replace('/detail')`
+  `this.props.history.replace('/detail')`
     
     2). goback(): 场景中需要返回上级页面的时候使用：
     
-        `this.props.history.goBack()`
+  `this.props.history.goBack()`
 
   #### 2.12 获取当前路由
 

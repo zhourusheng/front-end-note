@@ -1,4 +1,4 @@
-// 使用接口来描述一个拥有 firstName 和 lastName 字段的对象
+// 使用接口（interface）来描述一个拥有 firstName 和 lastName 字段的对象
 interface Person {
   firstName: string
   lastName: string
