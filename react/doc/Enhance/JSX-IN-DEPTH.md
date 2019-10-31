@@ -1,16 +1,3 @@
-
-
-
-# 高阶组件
-
-高阶组件（HOC）是是 React 中用于复用组件逻辑的一种高级技巧。HOC 自身不是 React API 的一部分，它是一种基于 React 的组合特性而形成的设计模式。
-
-具体而言，**高阶组件是参数为组件，返回值为新组件的函数**
-
-
-
-
-
 # 深入JSX
 
 实际上JSX仅仅只是 `React.createElement(component, props, ...children)` 的语法糖
@@ -45,6 +32,8 @@ function BlueDatePicker() {
 
 ### 1.3 用户定义的组件必须以大写字母开头
 
+以小写字母开头的元素代表一个HTML内置组件， 比如 `<div>` 或者 `<span>`会生成相应的字符串 `'div'` 或者 `'span'` 传递给 `React.createElement`（作为参数）。大写字母开头的元素则对应着JS 引入或者自定义的组件，如`<Foo />` 会编译成 `React.createElement(Foo)`
+
 
 ### 1.4 在运行时选择类型
 
@@ -55,15 +44,50 @@ function BlueDatePicker() {
 
 ### 2.1 JavsScript 表达式作为 props
 
+你可以把包裹在 {} 中的 JavaScript 表达式作为一个 prop 传递给 JSX 元素。例如，如下的 JSX：
+
+```js
+<MyComponent foo={1 + 2 + 3 + 4} />
+```
+
+if 语句以及 for 循环不是 JavaScript 表达式，所以不能在 JSX 中直接使用。但是，你可以用在 JSX 以外的代码中。比如：
+
+
 
 ### 2.2 字符串字面量
 
+你可以将字符串字面量赋值给 props,如下两个 JSX 是等价的
+
+```js
+<MyComponent message="hello world" />
+
+<MyComponent message={'hello world'} />
+```
 
 ### 2.3 Props 默认值为 "true"
 
+如果你没给 prop 赋值，它的默认值是 true。以下两个 JSX 表达式是等价的：
+
+```js
+<MyTextBox autocomplete />
+
+<MyTextBox autocomplete={true} />
+```
 
 ### 2.4 属性展开
 
+如果你已经有了一个 props 对象，你可以使用展开运算符 ... 来在 JSX 中传递整个 props 对象。以下两个组件是等价的
+
+```js
+function App1() {
+  return <Greeting firstName="Ben" lastName="Hector" />;
+}
+
+function App2() {
+  const props = {firstName: 'Ben', lastName: 'Hector'};
+  return <Greeting {...props} />;
+}
+```
 
 ## 3. JSX中的子元素
 
@@ -94,13 +118,16 @@ function BlueDatePicker() {
 
 ### 3.3 JS 表达式作为子元素
 
-JavaScript 表达式可以被包裹在 {} 中作为子元素。例如，以下表达式是等价的：
+JavaScript 表达式可以被包裹在 `{}` 中作为子元素。例如，以下表达式是等价的：
 
+```js
+<MyComponent>foo</MyComponent>
+
+<MyComponent>{'foo'}</MyComponent>
+```
 
 ### 3.4 函数作为子元素
 
 
 
 ### 3.5 boolean、 Null、Undefined 将会忽略
-
-
