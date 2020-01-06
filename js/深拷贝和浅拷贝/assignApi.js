@@ -77,6 +77,9 @@ const newObj = Object.assign(o1, o2, o3)
 // 9.拷贝访问器
 
 
+// 10. String 类型和 Symbol 类型的属性都会被拷贝，而且不会跳过那些值为 null 或 undefined 的源对象。 
+
+
 
 // https://github.com/yygmind/blog/issues/26
 // https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/assign
