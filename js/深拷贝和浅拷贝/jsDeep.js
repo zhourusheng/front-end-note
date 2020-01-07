@@ -60,26 +60,6 @@ function cloneDeep2(source) {
   return target
 }
 
-// 测试用例
-// var a = {
-//   name: 'muyiy',
-//   book: {
-//     title: "You Don't Know JS",
-//     price: '45'
-//   },
-//   a1: undefined,
-//   a2: null,
-//   a3: 123
-// }
-// var b = cloneDeep2(a)
-
-// a.name = '高级前端进阶'
-// b.name = 'zhourusheng'
-// a.book.price = '666'
-
-// console.log(a)
-// console.log(b)
-
 // 4. 解决循环引用问题
 
 // JSON 无法深拷贝循环引用
