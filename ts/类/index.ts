@@ -1,11 +1,49 @@
-class Greeter {
-  greeting: string
-  constructor(message: string) {
-    this.greeting = message
+class Animal {
+  name: string
+  constructor(name: string) {
+    this.name = name
   }
-  greet() {
-    return `Hello,${this.greeting}`
+  move(distance: number = 0) {
+    console.log(`${this.name} moved ${distance}m.`)
   }
 }
 
-let greeter = new Greeter('zhourusheng')
+/**
+ * 使用 extends 关键字创建了 Animal (基类) 的两个子类：Horse 和 Snake （派生类）
+ * 这两个派生类各自包含一个 构造函数，它必须调用 super() , 它会执行 基类 的构造函数
+ * 而且在 构造函数 里访问 this 的属性之前，一定要 调用 super(). 这是 TS 强制执行的一条重要规则
+ * */ 
+
+class Snake extends Animal {
+
+  constructor(name: string) {
+    super(name) // 必须调用super() 否则会报错：派生类的构造函数必须包含 "super" 调用。
+  }
+  move(distance: number = 5) {
+    console.log('Slithering...')
+    super.move(distance)
+  }
+}
+
+class House extends Animal {
+  constructor(name: string) {
+    super(name)
+  }
+  // 重写了从 Animal 继承来的 move 方法，使得 move 方法根据不同的类而具有不同的功能
+  move(distance: number = 45) {
+    console.log('Galloping...')
+    super.move(distance)
+  }
+}
+
+let sam = new Snake('Sammy')
+// 即使 tom 被声明为 Animal 类型，但因为它的值是 Horse，调用 tom.move(34) 时，它会调用 Horse 里重写的方法。
+let tom: Animal = new House('Tommy')
+
+sam.move()
+//Slithering...
+// Sammy moved 5m.
+
+tom.move(34)
+// Galloping...
+// Tommy moved 34m
