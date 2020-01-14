@@ -1,10 +1,17 @@
-/**
- *  必要参数，默认参数和可选参数：它们都表示某一个是参数
- *  有时，你想同时操作多个参数，或者并不知道会有多少参数传进来
- *  在JS中，可以使用 agruments 来访问所有传进来的参数
-*/
-// rest 是能用数组接收
-function buildName(firstName: string, ...restName: string[]): string {
-  return firstName + ' ' + restName.join('')
+let deck = {
+  suits: ['hearts', 'spades', 'clubs', 'diamonds'],
+  cards: Array(52),
+  createCardPicker: function () {
+    return function () {
+      let pickedCard = Math.floor(Math.random() * 52)
+      let pickedSuit = Math.floor(pickedCard / 13)
+
+      return { suit: this.suits[pickedSuit], card: pickedCard % 13 }
+    }
+  }
 }
-let employeeName = buildName('Joseph', 'Samuel', 'Lucas', 'MacKinzie')
+
+let cardPicker = deck.createCardPicker()
+let pickedCard = cardPicker()
+
+console.log('card: ' + pickedCard.card + ' of ' + pickedCard.suit)
