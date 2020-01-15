@@ -1,0 +1,1 @@
+# GlobalEventHandlers 接口
