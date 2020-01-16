@@ -24,7 +24,7 @@ DOM 的事件操作（监听和触发），都定义在 `EventTarget` 接口。�
 
 - `type`: 事件名称，大小写敏感。
 - `listener`: 监听函数。事件发生时，会调用该监听函数。
-- `useCapture`: 布尔值，表示监听函数是否在 捕获阶段(capture) 触发，默认false（监听函数只在 冒泡阶段 被触发）。该参数可选
+- `useCapture`: 布尔值，表示监听函数是否在 捕获阶段(capture) 触发，默认false（监听函数只在 冒泡阶段(bubble) 被触发）。该参数可选
 
 ## 3. EventTarget.removeEventListener()
 
