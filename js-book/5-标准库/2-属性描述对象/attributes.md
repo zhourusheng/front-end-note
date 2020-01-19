@@ -28,3 +28,96 @@ JavaScript 提供了一个内部数据结构，用来描述对象的属性，控
    也不得改变该属性的属性描述对象（`value`属性除外）。也就是说`configurable`属性控制了属性描述对象的可写性。
 5. `get`：`get` 是一个函数，表示属性的取值函数(`getter`)，默认值为 `undefined`。
 6. `set`：`set` 是一个函数，表示该属性的存值函数(`setter`)，默认值为 `undefined`。
+
+## 2. Object.getOwnPropertyDescriptor()
+
+`Object.getOwnPropertyDescriptor()`方法可以获取属性描述对象。它的第一个参数是目标对象，第二个参数是一个字符串，对应目标对象的某个属性名。
+
+```js
+var obj = {
+  p: 'a'
+}
+Object.getOwnPropertyDescriptor(obj, 'p')
+// { value: 'a', writable: true, enumerable: true, configurable: true }
+```
+
+注意，`Object.getOwnPropertyDescriptor()`只能用于对象自身的属性，不能获取继承的属性。
+
+```js
+var obj = { p: 'a' }
+
+Object.getOwnPropertyDescriptor(obj, 'toString')
+// undefined
+```
+
+上面代码中，`toString`是`obj`对象继承的属性，`Object.getOwnPropertyDescriptor()`无法获取
+
+
+## 3. Object.getOwnPropertyNames()
+
+`Object.getOwnPropertyNames()`方法返回一个数组，成员是参数对象自身的全部属性名，不管该属性是否可遍历（`enumerable`）
+
+```js
+var obj = Object.defineProperties(
+  {},
+  {
+    p1: {
+      value: 1,
+      enumerable: true
+    },
+    p2: {
+      value: 2,
+      enumerable: false
+    }
+  }
+)
+var res = Object.getOwnPropertyNames(obj)
+var res2 = Object.keys(obj)
+console.log(res)  // [ 'p1', 'p2' ]
+console.log(res2) // [ 'p1' ]
+```
+
+上面代码中，`obj.p1`是可遍历的，`obj.p2`是不可遍历的。`Object.getOwnPropertyNames`会将它们都返回。
+
+这跟`Object.keys`的行为不同，`Object.keys`只返回对象自身的可遍历属性的全部属性名。
+
+```js
+var a = Object.keys([])
+var b = Object.getOwnPropertyNames([])
+console.log(a)  // []
+console.log(b)  // [ 'length' ]
+
+var c = Object.keys(Object.prototype)
+var d = Object.getOwnPropertyNames(Object.prototype)
+console.log(c)  // []
+console.log(d)  
+// [ 'constructor',
+// '__defineGetter__',
+// '__defineSetter__',
+// 'hasOwnProperty',
+// '__lookupGetter__',
+// '__lookupSetter__',
+// 'isPrototypeOf',
+// 'propertyIsEnumerable',
+// 'toString',
+// 'valueOf',
+// '__proto__',
+// 'toLocaleString' ]
+```
+
+上面代码中，数组自身的`length`属性是不可遍历的，`Object.keys`不会返回该属性。
+第二个例子的`Object.prototype`也是一个对象，所有实例对象都会继承它，它自身的属性都是不可遍历的。
+
+## 4. Object.defineProperty(), Object.defineProperties()
+
+## 5. Object.prototype.propertyIsEnumerable()
+
+## 6. 元属性
+
+### 6.1 value
+
+### 6.2 writable
+
+### 6.3 enumerable
+
+### 6.4 configurable

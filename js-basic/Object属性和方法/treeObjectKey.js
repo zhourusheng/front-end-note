@@ -42,7 +42,8 @@ for (var key in child) {
 // Object.keys() 是ES5新增的方法，用来获取自身可枚举的属性键，
 // 返回值是包含自身所有可枚举属性的数组
 // 可以看出Object.keys()的效果其实和 for..in + hasOwnProperty 一致的
-Object.keys(child).forEach(key => console.log(key))
+var res1 = Object.keys(child)
+console.log(res1) // [ 'b' ]
 
 
 
@@ -50,4 +51,5 @@ Object.keys(child).forEach(key => console.log(key))
 // 返回一个由指定对象的所有自身属性的属性名
 // （包括不可枚举属性但不包括Symbol值作为名称的属性）组成的数组
 // 返回值：包含自身的可枚举 + 不可枚举属性的数组
-Object.getOwnPropertyNames(child).forEach(key => console.log(key))
+var res2 = Object.getOwnPropertyNames(child)
+console.log(res2) // [ 'b', 'c' ]
