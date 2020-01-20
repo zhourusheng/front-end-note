@@ -140,9 +140,25 @@ console.log(1 + obj2) // 3
 
 ### 5.2 Object.prototype.toString()
 
+`toString()`方法的作用是返回一个对象的字符串形式，默认情况下返回类型字符串。
+
 
 ### 5.3 toString() 的应用：判断数据类型
 
+不同数据类型的`Object.prototype.toString()`返回值如下：
+
+- 数值：返回`[object Number]`
+- 字符串：返回`[object String]`
+- 布尔值：返回`[object Boolean]`
+- undefined：返回`[object Undefined]`
+- null：返回`[object Null]`
+- 数组：返回`[object Array]`
+- arguments：返回`[object Arguments]`
+- 函数：返回`[object Function]`
+- Error 对象：返回`[object Error]`
+- Date 对象：返回`[object Date]`
+- RegExp 对象：返回`[object RegExp]`
+- 其他对象：返回`[object Object]`
 
 ### 5.4 Object.prototype.toLocaleString()
 
