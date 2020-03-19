@@ -10,11 +10,11 @@
 
 ## 2.  构造函数
 
-类(class) 就是对象的模板，对象就是“类”的实例。
+类(`class`) 就是对象的模板，对象就是 “类” 的实例。
 
-JavaScript 语言的对象体系，不是基于类的，而是基于 构造函数(constructor) 和 原型链(prototype)
+JavaScript 语言的对象体系，不是基于类的，而是基于 构造函数(`constructor`) 和 原型链(`prototype`)
 
-JS 使用构造函数(constructor) 作为对象的模板。
+JS 使用构造函数(`constructor`) 作为对象的模板。
 
 构造函数就是一个普通函数，但是有自己的特征和用法。
 
