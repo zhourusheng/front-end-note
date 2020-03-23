@@ -9,4 +9,25 @@ https://muyiy.cn/question/program/14.html
 3. 如果构造函数返回一个非基本类型的值（是对象），则返回这个值，否则返回上面创建的对象
 
 ```js
+function _new2(fn, ...args) {
+  // 创建一个空对象，继承构造函数的原型
+  var obj = Object.create(fn.prototype)
+  // 空对象赋值构造函数内部 this，用构造函数内部的方法改变空对象
+  const result = fn.apply(obj, ...args)
+  // 如果构造函数返回一个对象，则直接返回，否则返回上面创建的对象
+  return Object.prototype.toString.call(result) === '[object Object]'
+    ? result
+    : obj
+}
+
+const Person = function(name) {
+  this.age = '26'
+  this.sayHi = function() {
+    console.log(name)
+  }
+}
+
+const _z2 = _new2(Person, ['Heyixuan'])
+console.log(_z2.age) // 26
+_z2.sayHi() // Heyixuan
 ```
