@@ -21,7 +21,11 @@ var a = b // 重写 a
 
 ## 二、垃圾回收机制
 
+垃圾回收有两种方法：**标记清除** **引用计数**。  引用计数不太常用，标记清除最为常用
 
+### 1. 标记清除
+
+### 2. 引用计数
 
 ## 三、4 种常见的内存泄漏
 
@@ -52,3 +56,4 @@ var a = b // 重写 a
 ## 参考资料
 [JavaScript 中的垃圾回收和内存泄漏](https://github.com/ljianshu/Blog/issues/65)
 [JavaScript 进阶-常见内存泄露及如何避免](https://mp.weixin.qq.com/s/NQeIovbnZUKpz8ly7GW2_A)
+[请别忽略 JavaScript 内存泄漏问题](https://mp.weixin.qq.com/s?__biz=MjM5MDc4MzgxNA==&mid=2458454327&idx=1&sn=302185e45a6aaa8a7ed29a640bc002d2&chksm=b1c2291e86b5a008dbf5f1e42be82fa476d81c78eaa7a6604a16953afcf12c9928e0b15fc730&scene=0&xtrack=1#rd)
