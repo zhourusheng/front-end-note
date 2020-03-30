@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <input id="input" type="text" />
+    <div id="text"></div>
+    <script>
+      const input = document.getElementById('input')
+      const text = document.getElementById('text')
+
+      // 被监听的对象
+      let data = {
+        value: ''
+      }
+
+      // 传入要监听的属性 value, 进行数据劫持
+      Object.defineProperty(data, 'value', {
+        // 定义 setter 派发更新
+        set: function(val) {
+          // 当被监听、劫持的属性 data.value 发生改变时，就会触发 setter 去更新页面的值
+          text.innerHTML = val
+          input.value = val
+        },
+        // 定义 getter 依赖收集
+        get: function() {
+          // 当读取 data.value 的值时 就会触发 getter
+          // 此处的操作就相当于 data.value 绑定给 input.value
+          return input.value
+        }
+      })
+
+      // 监听 keyup 事件
+      input.onkeyup = function(e) {
+        // 改变 data.value
+        data.value = e.target.value
+      }
+    </script>
+  </body>
+</html>
