@@ -108,9 +108,24 @@ function defineRefPropWarningGetter(props, displayName) {
  * @param {*} props
  * @internal
  */
+
+  /**
+  * ReactElement 只是一个用来承载信息的容器，他会告诉后续的操作这个节点的以下信息
+  * type类型，用于判断如何创建节点
+  * key和ref这些特殊信息
+  * props新的属性内容
+  * $$typeof用于确定是否属于ReactElement
+   */ 
+
 const ReactElement = function(type, key, ref, self, source, owner, props) {
   const element = {
     // This tag allows us to uniquely identify this as a React Element
+
+    // 其中REACT_ELEMENT_TYPE是一个常量，用来标识该对象是一个ReactElement。
+    // 所有通过 createElement 创建的节点它的 $$typeof 都是 REACT_ELEMENT_TYPE
+    // 特殊情况：
+    // 例：ReactDOM.createPortal的时候是REACT_PORTAL_TYPE，不过他不是通过createElement创建的，所以他应该也不属于ReactElement
+
     $$typeof: REACT_ELEMENT_TYPE,
 
     // Built-in properties that belong on the element
@@ -177,7 +192,11 @@ export function createElement(type, config, children) {
   let propName;
 
   /**
-   * 
+  * type 有多种类型
+  * 字符串比如 div，p 代表原生DOM，称为 HostComponent
+  * Class类型是我们继承自Component或者PureComponent的组件，称为ClassComponent
+  * 方法就是functional Component
+  * 原生提供的Fragment、AsyncMode等是Symbol，会被特殊处理
    */
 
   // Reserved names are extracted
@@ -228,10 +247,18 @@ export function createElement(type, config, children) {
   // Children can be more than one argument, and those are transferred onto
   // the newly allocated props object.
   const childrenLength = arguments.length - 2;
+
+  /**
+   * 处理 children , 第三之后的参数都被当做 children
+   */ 
+
   if (childrenLength === 1) {
     props.children = children;
   } else if (childrenLength > 1) {
     const childArray = Array(childrenLength);
+  /**
+   * 将所有的 children 都放入一个数组
+   */     
     for (let i = 0; i < childrenLength; i++) {
       childArray[i] = arguments[i + 2];
     }
@@ -240,18 +267,27 @@ export function createElement(type, config, children) {
         Object.freeze(childArray);
       }
     }
+    // 通过 props,children 所获取到的内容
     props.children = childArray;
   }
 
   // Resolve default props
+
+  /**
+   * 处理 default props
+   */ 
   if (type && type.defaultProps) {
     const defaultProps = type.defaultProps;
     for (propName in defaultProps) {
+  /**
+   * 当组件所需的 props 没有传入时，就使用 defaultProps 中的值
+   */ 
       if (props[propName] === undefined) {
         props[propName] = defaultProps[propName];
       }
     }
   }
+
   if (__DEV__) {
     if (key || ref) {
       const displayName =
@@ -266,6 +302,11 @@ export function createElement(type, config, children) {
       }
     }
   }
+
+  /**
+   * createElement 的最终返回值是一个 ReactElement()
+   */ 
+
   return ReactElement(
     type,
     key,
