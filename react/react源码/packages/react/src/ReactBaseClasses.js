@@ -18,6 +18,11 @@ if (__DEV__) {
 /**
  * Base class helpers for the updating state of a component.
  */
+
+/**
+ * React.Component 参数有三个：props, context, updater
+ */
+
 function Component(props, context, updater) {
   this.props = props;
   this.context = context;
@@ -55,7 +60,14 @@ Component.prototype.isReactComponent = {};
  * @final
  * @protected
  */
+
+ /**
+ * 这就是 class component 中最常用 setState()
+ */
+
 Component.prototype.setState = function(partialState, callback) {
+
+  // partialState 是一个 object 或者 function
   invariant(
     typeof partialState === 'object' ||
       typeof partialState === 'function' ||
@@ -79,6 +91,10 @@ Component.prototype.setState = function(partialState, callback) {
  * @param {?function} callback Called after update is complete.
  * @final
  * @protected
+ */
+
+ /**
+ * forceUpdate()
  */
 Component.prototype.forceUpdate = function(callback) {
   this.updater.enqueueForceUpdate(this, callback, 'forceUpdate');
@@ -128,6 +144,10 @@ ComponentDummy.prototype = Component.prototype;
 /**
  * Convenience component with default shallow equality check for sCU.
  */
+
+ /**
+ * PureComponent()
+ */
 function PureComponent(props, context, updater) {
   this.props = props;
   this.context = context;
@@ -140,6 +160,9 @@ const pureComponentPrototype = (PureComponent.prototype = new ComponentDummy());
 pureComponentPrototype.constructor = PureComponent;
 // Avoid an extra prototype jump for these methods.
 Object.assign(pureComponentPrototype, Component.prototype);
+
+// 这个地方进行一个标识：isPureReactComponent
+// 后续的 react-dom 会进行主动判断
 pureComponentPrototype.isPureReactComponent = true;
 
 export {Component, PureComponent};
